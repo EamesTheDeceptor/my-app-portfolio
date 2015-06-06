@@ -1,6 +1,6 @@
 package example.com.project_zero;
 
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -36,37 +36,37 @@ public class MainActivity extends AppCompatActivity {
         spotify_streamer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.spotify_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.spotify_message));
             }
         });
         scores_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.score_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.score_message));
             }
         });
         library_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.library_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.library_message));
             }
         });
         build_it_bigger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.build_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.build_message));
             }
         });
         xyz_reader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.xyz_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.xyz_message));
             }
         });
         own_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,R.string.own_app_message,Toast.LENGTH_SHORT).show();
+                ToastText(getResources().getString(R.string.own_app_message));
             }
         });
 
@@ -77,7 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+    public void ToastText(String s)
+    {
+        Toast.makeText(MainActivity.this,s,Toast.LENGTH_SHORT).show();
+    }
 
 
 
